@@ -1,0 +1,56 @@
+/* custom.js - custom js code for Launchgood/Patronicity- rdm created */
+// usage: new ProjectPanelEqualizer(panel container selector.)
+// TODO: if there is only one panel per row showing (ie in), don't need to do this.
+function ProjectPanelEqualizer(selector)
+{
+	var model= this;
+	var containerSelectors= [];
+	
+	if (selector instanceof Array) {
+		containerSelectors= selector;
+	} else {
+		containerSelectors.push(selector);
+	}
+	
+	this.SyncSizes= function() {
+		//these are the selectors for patronicity only: ['.panel-body h2', '.panel-body p.lead']
+		//and these are the selectors for LG: '.panel-body h4', '.panel-body p#description'
+		//but if we combine them both in one array, it probably won't break anything....
+		var selectors= ['.panel-body h4', '.panel-body p.description', '.panel-body p.funded_and_location', '.panel-body h2', '.panel-body p.lead'];
+		var window_width= $(window).width();
+
+		/* Large desktop */
+		// @media (min-width: 1200px) { ... }
+		/* Portrait tablet to landscape and desktop */
+		// @media (min-width: 768px) and (max-width: 979px) { ... }
+		/* Landscape phone to portrait tablet */
+		// @media (max-width: 767px) { ... }
+		/* Landscape phones and down */
+		// @media (max-width: 480px) { ... }
+		for(var jj= 0; jj<containerSelectors.length; jj++)
+		{
+			var container= $(containerSelectors[jj]);
+			for(var ii= 0; ii<selectors.length; ii++)
+			{
+				var selector= selectors[ii];
+				var boxes= $(selector, container);
+			
+				boxes.css('height', ''); // clear them first
+				if(window_width>767) // multiple rows.
+				{
+					var maxHeight = Math.max.apply(
+						Math, boxes.map(function() {
+							return $(this).height();
+					}).get());
+					boxes.height(maxHeight);
+				}
+			}
+		}
+	}
+
+	$(window).resize(function() {
+		model.SyncSizes();
+	});
+	
+	this.SyncSizes();
+}

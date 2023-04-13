@@ -1,0 +1,434 @@
+/*
+* Montserrat Font
+*
+*/
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+};
+
+.hfb_maps-shortcode *:focus {
+  outline: none;
+}
+
+.hfb_maps-shortcode {
+  width: 100%;
+}
+
+.hfb_maps-shortcode div,
+.hfb_maps-shortcode span,
+.hfb_maps-shortcode h1,
+.hfb_maps-shortcode h2,
+.hfb_maps-shortcode h3,
+.hfb_maps-shortcode h4,
+.hfb_maps-shortcode h5,
+.hfb_maps-shortcode ul,
+.hfb_maps-shortcode li,
+.hfb_maps-shortcode button,
+.hfb_maps-shortcode input,
+.hfb_maps-shortcode a {
+  font-family: "Montserrat", "Helvetica Neue", sans-serif !important;
+  font-weight: 400 !important;
+  line-height: initial !important;
+  letter-spacing: initial !important;
+  color: #000 !important;
+  outline: none !important;
+}
+
+.hfb_maps-shortcode button {
+  outline: none !important;
+  background: none;
+  color: black;
+  width: 100%;
+  text-align: left;
+  text-transform: none;
+  font-style: normal;
+  padding: 15px;
+  font-size: 14px;
+  border: none;
+  overflow: hidden;
+}
+
+.hfb_maps-shortcode ul li {
+  border-bottom: black;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  width: 100%;
+  display: flex;
+}
+
+.hfb_maps-list_actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hfb_maps-list_actions button {
+  width: auto !important;
+  width: initial !important;
+}
+
+.hfb_maps-map_layer_locations_search-results {
+  display: flex;
+  padding: 10px !important;
+  font-size: 20px !important;
+}
+
+.hfb_maps-map_layer_locations_print-button {
+  display: flex;
+}
+
+.hfb_maps-map_container {
+  position: relative;
+}
+
+#hfb_maps-map,
+#app {
+  height: 700px;
+  width: 100%;
+}
+
+#hfb_maps-map_menu {
+  background: hsla(0, 0%, 100%, .9);
+  height: 100%;
+  z-index: 2;
+  padding-top: 15px;
+  top: 0;
+  left: 20px;
+  position: absolute;
+  width: 327px;
+ -ms-overflow-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.hfb_maps-map_search_container,
+.hfb_maps-map_availability_container,
+.hfb_maps-map_layer_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px !important;
+  padding: 0 10px !important;
+  position: relative;
+}
+
+.hfb_maps-map_search_button_container {
+  position: absolute;
+  right: 60px;
+  top: 0;
+}
+
+.hfb_maps-map_search_button_container.nearby-search {
+  display: none;
+}
+
+.hfb_maps-map_search_button_container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border-left: 1px solid #ddd;
+  height: 28px;
+}
+
+.hfb_maps-map_search_button {
+  background: transparent !important;
+  border: 0 !important;
+  margin: 0 !important;
+  outline: 0  !important;
+  overflow: visible !important;
+  display: block !important;
+  padding: 12px 15px !important;
+}
+
+.hfb_maps-map_search_button::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 24px;
+  background: url("search.png");
+  background-size: 72px 24px;
+}
+
+.hfb_maps-map_clear_button_container {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.hfb_maps-map_clear_button {
+  background: transparent !important;
+  border: 0 !important;
+  margin: 0 !important;
+  outline: 0  !important;
+  overflow: visible !important;
+  display: block !important;
+  padding: 12px 15px !important;
+  cursor: initial !important;
+}
+
+.hfb_maps-map_clear_button::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 24px;
+  background-image: url("clear.png");
+  background-size: 96px 24px;
+  cursor: pointer !important;
+}
+
+.hfb_maps-map_clear_nearby_button {
+  cursor: initial !important;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  width: 71px  !important;
+  height: 28px;
+  border-radius: 14px;
+  background: #9b9b9b !important;
+}
+
+.hfb_maps-map_clear_nearby_button::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  z-index: 6;
+  top: 2px;
+  width: 20px;
+  height: 24px;
+  background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,1));
+  right: 72px;
+}
+
+.hfb_maps-map_clear_nearby_button .marker {
+  display: block;
+  background-image: url("clear-nearby.png");
+  background-size: 32px 16px;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  cursor: initial;
+  pointer-events: none !important;
+}
+
+.hfb_maps-map_clear_nearby_button .clear {
+  display: block;
+  background-image: url("clear-nearby.png");
+  background-size: 32px 16px;
+  background-position: -16px 0;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 12px;
+  top: 7px;
+  cursor: pointer;
+}
+
+.hfb_maps-map_availability_button_container {
+  display: flex;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+}
+
+.hfb_maps-map_layer_button_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button.hfb_maps-map_availability_button {
+  padding: 10px 0 !important;
+  text-align: center !important;
+  border-top: 1px solid #bbb !important;
+  border-right: 1px solid #bbb !important;
+  border-bottom: 1px solid #bbb !important;
+}
+
+button.hfb_maps-map_availability_button.selected {
+  color: #fff !important;
+  background-color: #8bc43e;
+}
+
+button.hfb_maps-map_availability_button:first-child {
+  border-radius: 3px 0 0 3px;
+  border-left: 1px solid #bbb !important;
+}
+
+button.hfb_maps-map_availability_button:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+button.hfb_maps-map_layer_button {
+  width: auto;
+  border-radius: 3px;
+  padding: 5px !important;
+  margin: 0 10px 10px 0 !important;
+  text-align: center !important;
+  color: #8bc43e !important;
+  border: 1px solid #8bc43e !important;
+}
+
+button.hfb_maps-map_layer_button.selected {
+  color: #fff !important;
+  background-color: #8bc43e;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+}
+
+button.hfb_maps-map_layer_button:first-child {
+ margin-left: 0 !important;
+}
+
+button.hfb_maps-map_layer_button:last-child {
+  margin-right: 0 !important;
+}
+
+.hfb_maps-map_location_list-item,
+.hfb_maps-map_layers_list-item {
+  padding: 0 10px !important;
+  align-items: center;
+}
+
+.hfb_maps-map_layers_list-item img {
+  height: 31px;
+}
+
+.hfb_maps-map_location_list-item button {
+  padding: 15px 5px 15px 10px !important;
+}
+
+.hfb_maps-map_location_list-item img {
+  height: 21px;
+}
+
+.hfb_maps-nearest_address_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hfb_maps-map_layer_locations-button-text-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hfb_maps-truncate_location_text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hfb_maps-map_layer_locations-button_distance {
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.hfb_maps-layer_name {
+  margin-bottom: 5px;
+}
+
+.hfb_maps-map_search_container-header {
+  font-size: 16px !important;
+  margin-bottom: 5px !important;
+}
+
+.hfb_maps-input {
+  font-size: 16px !important;
+  height: 48px !important;
+  color: #666 !important;
+  background: transparent !important;
+  border: 1px solid #bbb !important;
+  border-radius: 3px !important;
+  display: block !important;
+  width: 100% !important;
+  padding: 8px 90px 8px 8px !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+}
+
+/* Hide number input up/down button */
+.hfb_maps-input::-webkit-outer-spin-button,
+.hfb_maps-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+   margin: 0;
+}
+
+@media (max-width: 760px) {
+  #app {
+     height: 1000px;
+  }
+  #hfb_maps-map {
+    height: 500px;
+  }
+  #hfb_maps-map_menu {
+    height: 500px;
+    position: relative;
+    width: 100%;
+    max-width: initial;
+  }
+}
+
+@media (max-width: 900px) {
+  #hfb_maps-map_menu {
+    left: 0;
+  }
+}
+
+.hfb_maps-map_marker-popup h3 {
+  font-size: 22px !important;
+}
+
+.hfb_maps_link {
+  text-decoration: underline !important;
+}
+
+.hfb_maps-map_layer_locations-button-print-info-container{
+    display: none;
+}
+
+@media print {
+  header,
+  footer,
+  .hfb_maps-map_search_container,
+  .hfb_maps-map_availability_container,
+  .hfb_maps-map_layer_container,
+  .hfb_maps-list_actions,
+  .hfb_maps-map_location_list-item img,
+  #hfb_maps-map {
+    display: none !important;
+  }
+
+  .hfb_maps-shortcode,
+  .hfb_maps-map_container {
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+  }
+
+  #hfb_maps-map_menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+    z-index: 99999;
+    background-color: #ffffff;
+  }
+
+  .hfb_maps-map_layer_locations-button-print-info-container {
+    display: inline !important;
+  }
+}
+
+.hfb_maps-admin-sheet-list-item-more-options {
+  min-height: 15px;
+  height: auto;
+  width: auto;
+  display: none;
+}
+
+.hfb_maps-admin-sheet-list-item-more-options.expanded {
+   display: block;
+}
